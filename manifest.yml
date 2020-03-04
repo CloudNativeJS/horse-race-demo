@@ -1,7 +1,7 @@
 ---
 applications:
-- name: horserace
+- name: horse-race
   memory: 1G
   instances: 1
 routes:
-  - route: horserace.eu-gb.mybluemix.net/
+  - route: horse-race.eu-gb.mybluemix.net/

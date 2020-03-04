@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./public/stylesheets/style.css">
+  <title>Leaderboard</title>
+</head>
+<div class="container text-center">
+  <h1>All-Time Leaderboard</h1>
+</div>
+
+<body>
+  <section id="leader">
+    <div class="text-center">
+      <b>
+        <div class="row">
+          <div class="col-sm">#</div>
+          <div class="col-sm">Username</div>
+          <div class="col-sm">Time</div>
+        </div>
+      </b>
+      <template id="row-template">
+        <div class="row">
+            <div class="col-sm leader-place"></div>
+            <div class="col-sm text-left">
+              <img class="leader-img">
+              <span class="leader-username"></span>
+            </div>
+            <div class="col-sm leader-time"></div>
+        </div>
+      </template>
+    </div>
+  </section>
+  <script src="./socket.io/socket.io.js"></script>
+  <script src="./public/scripts/leaderboard.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

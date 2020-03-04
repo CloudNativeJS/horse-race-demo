@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/stylesheets/style.css">
+    <title>Horse Race: Race</title>
+</head>
+<body>
+    <section id="home">
+        <div class="container">
+            <h1>Horse Race</h1>
+            <div class="img-side">
+                <img src="./public/images/ibm-logo.svg">
+                <span id="monster-plus" class="align-middle">+</span>
+                <img id="node-logo" src="./public/images/node-logo.png">
+            </div>
+            <img id="big-horse" src="./public/images/horse.svg">
+            <p>Find out more about Node.js @ IBM</p>
+            <p><b>developer.ibm.com/node</b></p>
+        </div>
+    </section>
+    <section id="race">
+        <div id="race-track"></div>
+        <template id="lane-template">
+            <div class="row">
+                <h2 class="lane-name"></h2>
+                <object class="horse" data="./public/images/horse.svg" type="image/svg+xml"></object>
+                <object class="finish-line" data="./public/images/finish-line.svg" type="image/svg+xml"></object>
+            </div>
+        </template>
+    </section>
+    <section id="leaderboard">
+        <div class="container text-center">
+            <h1>
+                Leaderboard
+            </h1>
+            <div id="leaderboard-table" class="container">
+                <b>
+                    <div class="row">
+                        <div class="col-sm">
+                            Place
+                        </div>
+                        <div class="col-sm">
+                            Username
+                        </div>
+                        <div class="col-sm">
+                            Time
+                        </div>
+                    </div>
+                </b>
+            </div>
+            <template id="row-template">
+                <div class="row">
+                    <div class="col-sm leaderboard-place">
+                    </div>
+                    <div class="col-sm leaderboard-name">
+                    </div>
+                    <div class="col-sm leaderboard-time">
+                    </div>
+                </div>
+            </template>
+        </div>
+    </section>
+    <footer>
+        <div style="float: right;">
+            <img id="appsody" src="./public/images/appsody.svg">
+            <img id="cloudnative" src="./public/images/cloudnativejs.png">
+            <img id="openshift" src="./public/images/openshift.png">
+        </div>
+        <div style="float: left;">
+            <img id="qr" src="./public/images/qr-code.png">
+            <p><b>Scan to play!</b><br>or visit<b> ibm.biz/horse-race</b></p>
+        </div>
+        <div>
+            <p style="padding: 3vh 0em;">Node.js is a trademark of Joyent, Inc. and is used with its permission. We are not endorsed by or affiliated with Joyent.</p>
+        </div>
+    </footer>
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="./public/scripts/race.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

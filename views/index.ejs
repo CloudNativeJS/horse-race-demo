@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./public/stylesheets/style.css">
+    <title>Horse Race</title>
+</head>
+<body>
+    <section id="landing">
+        <div class="container text-center">
+            <h1>Horse Race</h1>
+            <h2>Welcome <%= user.username %>!</h2>
+            <button id="btn-join" type="button" class="btn btn-primary">Play!</button>
+        </div>
+    </section>
+    <section id="pending">
+        <div class="container text-center">
+            <h1>Horse Race</h1>
+            <h2>Waiting for approval</h2>
+            <div class="loader text-center mx-auto"></div>
+        </div>
+    </section>
+    <section id="tapping">
+        <div class="container text-center">
+            <h1>Tapping</h1>
+            <button id="btn-tap" type="button" class="btn btn-primary" disabled>Waiting...</button>
+        </div>
+    </section>
+    <section id="finished">
+        <div class="container text-center">
+            <h1>You finished:</h1>
+            <h2 id="finished-place"></h2>
+            <h3 id="finished-time"></h3>
+        </div>
+    </section>
+    <footer style="height: 15vh;">
+        <p>Find out more about Node.js @ IBM</p>
+        <p><b><a target="_blank" href="https://developer.ibm.com/node">developer.ibm.com/node</a></b></p>
+        <div>
+            <a target="_blank" href="https://appsody.dev"><img id="appsody" src="./public/images/appsody.svg"></a>
+            <a target="_blank" href="https://www.openshift.com/"><img id="openshift" src="./public/images/openshift.png"></a>
+        </div>
+    </footer>
+    <script>
+      var user = <%-JSON.stringify(user)%>
+    </script>
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="./public/scripts/index.js"></script>
+    <script type="application/json" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="application/json" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script type="application/json" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
