@@ -1,0 +1,13 @@
+{
+  "name": "Click",
+  "properties": {
+    "socket_id": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
